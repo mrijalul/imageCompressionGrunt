@@ -23,6 +23,5 @@ module.exports = function(grunt)
 			}
 		}
 	});
-	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-image');
 };
