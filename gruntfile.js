@@ -15,6 +15,9 @@ module.exports = function(grunt)
 					svgo: true
 				},
 				files: [{
+					optimizationLevel: 3,
+					progressive: true,
+					interlaced: true,
 					expand: true,
 					cwd: 'images/',
 					src: ['**/*.{png,jpg,jpeg,gif}'],

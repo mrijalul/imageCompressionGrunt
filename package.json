@@ -12,5 +12,8 @@
     "grunt": "^1.0.1",
     "grunt-contrib-nodeunit": "^1.0.0",
     "grunt-image": "^2.2.3"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1"
   }
 }
