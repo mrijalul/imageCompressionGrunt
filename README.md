@@ -14,5 +14,9 @@ npm install
 ```
 
 ```
+mkdir images
+```
+
+```
 grunt image
 ```
