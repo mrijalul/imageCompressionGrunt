@@ -6,25 +6,29 @@ module.exports = function(grunt)
 			dynamic: {
 				options: {
 					pngquant: true,
-					optipng: false,
+					optipng: true,
 					zopflipng: true,
-					jpegRecompress: false,
+					jpegRecompress: true,
 					jpegoptim: true,
 					mozjpeg: true,
 					gifsicle: true,
-					svgo: true
+					guetzli: true,
+					svgo: true,
+					reporterOutput: null,
+					colorizeOutput: true
 				},
 				files: [{
-					optimizationLevel: 3,
+					optimizationLevel: 7,
 					progressive: true,
 					interlaced: true,
 					expand: true,
 					cwd: 'images/',
-					src: ['**/*.{png,jpg,jpeg,gif}'],
-					dest: 'img-compress/'
+					src: ['**/*.{png,PNG,jpg,JPG,jpeg,gif}'],
+					dest: 'img-compress-image/'
 				}]
 			}
 		}
 	});
 	grunt.loadNpmTasks('grunt-image');
+	grunt.registerTask('default', ['image']);
 };

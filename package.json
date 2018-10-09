@@ -10,8 +10,12 @@
   "license": "ISC",
   "devDependencies": {
     "grunt": "^1.0.1",
+    "grunt-contrib-imagemin": "^2.0.1",
     "grunt-contrib-nodeunit": "^1.0.0",
-    "grunt-image": "^2.2.3"
+    "grunt-guetzli": "^1.0.0",
+    "grunt-image": "^2.2.3",
+    "grunt-tinyimg": "^1.0.0",
+    "grunt-tinypng": "^0.7.0"
   },
   "dependencies": {
     "gulp": "^3.9.1"
