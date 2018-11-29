@@ -8,7 +8,7 @@ module.exports = function(grunt)
 					pngquant: true,
 					optipng: true,
 					zopflipng: true,
-					jpegRecompress: true,
+					jpegRecompress: '--min',
 					jpegoptim: true,
 					mozjpeg: true,
 					gifsicle: true,
@@ -24,7 +24,12 @@ module.exports = function(grunt)
 					expand: true,
 					cwd: 'images/',
 					src: ['**/*.{png,PNG,jpg,JPG,jpeg,gif}'],
-					dest: 'img-compress-image/'
+					dest: 'img-compress-image/',
+					rename: function(dest, src){
+						var get_last_char 		= src.slice(-4);
+						var remove_last_char 	= src.slice(0,-4);
+						return dest + remove_last_char + '.min.' + get_last_char;
+					}
 				}]
 			}
 		}
