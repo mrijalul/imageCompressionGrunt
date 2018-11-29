@@ -28,7 +28,8 @@ module.exports = function(grunt)
 					rename: function(dest, src){
 						var get_last_char 		= src.slice(-4);
 						var remove_last_char 	= src.slice(0,-4);
-						return dest + remove_last_char + '.min.' + get_last_char;
+						var double_dots 		= dest + remove_last_char + '.min.' + get_last_char;
+						return double_dots.replace('..','.');
 					}
 				}]
 			}
