@@ -32,7 +32,7 @@ module.exports = function(grunt)
 						var rplc2 				= rplc.replace(/-/g,'_');
 						
 						var img 				= dest + rplc2 + '.min.' + get_last_char;
-						return img.replace('..','.');
+						return img.replace('..','.').toLowerCase();
 					}
 				}]
 			}
