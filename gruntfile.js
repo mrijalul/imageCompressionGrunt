@@ -29,7 +29,7 @@ module.exports = function(grunt)
 						var get_last_char 		= src.slice(-4);
 						var remove_last_char 	= src.slice(0,-4);
 						var rplc				= remove_last_char.replace(' ','_'); 
-						var rplc2 				= rplc.replace('-','_');
+						var rplc2 				= rplc.replace(/-/g,'_');
 						
 						var img 				= dest + rplc2 + '.min.' + get_last_char;
 						return img.replace('..','.');
